@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complete Layout Example</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header with Flexbox */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #b49797;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Grid Layout */
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    .grid-item {
+      background-color: #c8e6c9;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    /* Form Section */
+    .form-section {
+      padding: 20px;
+      background-color: #e3f2fd;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #7faace;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Google Form Embed */
+    .google-form {
+      padding: 20px;
+      background-color: #fff3e0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2d0b0bba;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* Responsive Media Quary */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      .grid-item img {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header with Flexbox -->
+  <header>
+    <div class="logo"><i class="NATURE></i> </div>
+    <nav>
+      <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#gallery"><i class="fa-solid fa-image"></i> Gallery</a>
+      <a href="#form"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a href="https://example.com" target="_blank"><i class="fa-solid fa-link"></i> External</a>
+    </nav>
+  </header>
+
+  <!-- Grid Section with Images -->
+  <section class="grid-section" id="gallery">
+    <div class="grid-item">
+      <h3>Nature</h3>
+      <img src="th (3).jpeg" alt="Nature" />
+    </div>
+    <div class="grid-item">
+      <h3>City</h3>
+      <img src="th (1).jpeg" alt="City" />
+    </div>
+    <div class="">
+      <h3>Animals</h3>
+      <img src="th (2).jpeg" alt="Animals" />
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section" id="form">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name..." required />
+      <input type="email" placeholder="Your Email..." required />
+      <textarea rows="4" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Embedded Google Form -->
+  <section class="google-form">
+    <h2>Feedback (Google Form)</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD6QXY4GxYT7gJZzUX0eHn9_HMZ9asrGjsXoYXUlXkT_XhLg/viewform?embedded=true">Loading…</iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyWebsite | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
